@@ -4,6 +4,8 @@
 body{
     background-color: rgb(23 24 31);
     display: flex;
+    height: 100vh;
+    margin: 0;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -11,7 +13,7 @@ body{
 }
 
 .container{
-    height: 400px;
+    height: 500px;
     width: 600px;
     justify-content: center;
     background-color: rgba(152, 159, 217, 0.08);
