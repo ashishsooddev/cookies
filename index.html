@@ -19,12 +19,35 @@
         </section>
     </div>
 
-    <div id="cookieModal" class="modal">
-        <div class="modal-content">
+    <div id="dialoguebox" class="box">
+        <div class="box-content">
             <h2>Cookies Notice</h2>
-            <p>We use cookies to improve your experience.</p>
-            <button id="acceptAll">Accept All</button>
-            <button id="openSettings">Settings</button>
+            <p>We use cookies to improve your experience on our website. By clicking "Agree", you agree 
+            to the use of cookies for marketing and analytics preferences.</p>
+            <button type="button" id="acceptAll">Accept All</button>
+            <button type="button" id="openSettings">Settings</button>
+        </div>
+    </div>
+
+    <div id="settingsbox" class="box">
+        <div class="box-content">
+            <h2>Cookie Settings</h2>
+            <label>
+                <input type="checkbox" id="browser" checked><span class="slider"></span>
+                Browser Info
+            </label>
+
+            <label>
+                <input type="checkbox" id="os" checked><span class="slider"></span>
+                Operating System
+            </label>
+
+            <label>
+                <input type="checkbox" id="screen" checked><span class="slider"></span>
+                Screen Size
+            </label>
+            <br><br>
+            <button type="button" id="saveSettings">Save Preferences</button>
         </div>
     </div>
 </body>
