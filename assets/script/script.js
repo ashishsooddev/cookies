@@ -29,6 +29,7 @@ function getBrowserName() {
     return "Unknown Browser";
   }
 }
+
 function getOSName() {
   let systemInfo = navigator.userAgent;
 
