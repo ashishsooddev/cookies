@@ -19,3 +19,19 @@ body{
     border-radius: 15px;
     font-size: 20px;
 }
+.hero p{
+    margin-top: 20px;
+    font-size: 24px;
+}
+.item-1{
+    color: #fc7006;
+    font-weight: 500;
+}
+.item-2{
+    color: #f05bfe;
+    font-weight: 500;
+}
+.item-3{
+    color: #67f954;
+    font-weight: 500;
+}
