@@ -29,3 +29,16 @@ function getBrowserName() {
     return "Unknown Browser";
   }
 }
+function getOSName() {
+  let systemInfo = navigator.userAgent;
+
+  if (systemInfo.indexOf("Win") !== -1) {
+    return "Windows";
+  }else if (systemInfo.indexOf("Mac") !== -1) {
+    return "MacOS";
+  }else if (systemInfo.indexOf("Linux") !== -1) {
+    return "Linux";
+  }else {
+    return "Unknown OS";
+  }
+}
