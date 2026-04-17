@@ -43,3 +43,61 @@ function getOSName() {
     return "Unknown OS";
   }
 }
+
+window.addEventListener("load", function () {
+  const dialog = document.getElementById("dialoguebox");
+  const settings = document.getElementById("settingsbox");
+  const acceptBtn = document.getElementById("acceptAll");
+  const settingsBtn = document.getElementById("openSettings");
+  const saveBtn = document.getElementById("saveSettings");
+
+  setTimeout(() => {
+    if (!getCookie("userChoice")) {
+     dialog.style.display = "flex";
+     dialog.style.justifyContent = "center";
+     dialog.style.alignItems = "center";
+    }
+  }, 10000);
+
+  acceptBtn.onclick = function () {
+    setAllCookies();
+    dialog.style.display = "none";
+  };
+
+  settingsBtn.onclick = function () {
+    settings.style.display = "flex";
+    settings.style.justifyContent = "center";
+    settings.style.alignItems = "center";
+  };
+
+  saveBtn.onclick = function () {
+    let browser = document.getElementById("browser").checked;
+    let os = document.getElementById("os").checked;
+    let screenSize = document.getElementById("screen").checked;
+    let anySelected = false;
+
+    if (browser) {
+      setCookie("browser", getBrowserName(), 20);
+      anySelected = true;
+    }
+
+    if (os) {
+      setCookie("os", getOSName(), 20);
+      anySelected = true;
+    }
+
+    if (screenSize) {
+      setCookie("screen", screen.width + "x" + screen.height, 20);
+      anySelected = true;
+    }
+
+    if (!anySelected) {
+      setCookie("userChoice", "rejected", 20);
+    } else {
+      setCookie("userChoice", "custom", 20);
+    }
+
+    settings.style.display = "none";
+    dialog.style.display ="none";
+  };
+});
