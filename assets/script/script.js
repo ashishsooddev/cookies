@@ -70,6 +70,10 @@ window.addEventListener("load", function () {
     settings.style.alignItems = "center";
   };
 
+  if (navigator.cookieEnabled === false) {
+    alert("Cookies are disabled in your browser");
+  }
+  
   saveBtn.onclick = function () {
     let browser = document.getElementById("browser").checked;
     let os = document.getElementById("os").checked;
