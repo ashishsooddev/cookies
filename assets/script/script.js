@@ -101,3 +101,10 @@ window.addEventListener("load", function () {
     dialog.style.display ="none";
   };
 });
+
+function setAllCookies() {
+  setCookie("browser", getBrowserName(), 20);
+  setCookie("os", getOSName(), 20);
+  setCookie("screen", screen.width + "x" + screen.height, 20);
+  setCookie("userChoice", "accepted", 20);
+}
