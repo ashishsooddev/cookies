@@ -2,7 +2,10 @@
 @import url(./reset.css);
 
 body{
-    background-color: rgb(23 24 31);
+    background-image: url("../media/image-astro.jpg"); 
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
     display: flex;
     height: 100vh;
     margin: 0;
@@ -17,7 +20,7 @@ body{
     width: 600px;
     color:#fff;
     justify-content: center;
-    background-color: rgba(152, 159, 217, 0.08);
+    background-color: rgba(36, 37, 41, 0.2);
     border: 1px solid #fff;
     border-radius: 15px;
     font-size: 20px;
